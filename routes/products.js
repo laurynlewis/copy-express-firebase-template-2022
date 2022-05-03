@@ -9,7 +9,7 @@ const {fetchProducts} = require("../services/firestore-service")
 router.get('/products', async function(req, res, next) {
     try {
         var products = await fetchProducts()
-
+        console.log("hi");
         res.render("products", {"products": products})
     } catch (error) {
         console.log("ERR:", error)
